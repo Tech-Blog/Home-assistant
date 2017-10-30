@@ -10,8 +10,6 @@
 # this script is for ubuntu 14.04 
 ### END INIT INFO
 
-TOMCAT_DIR=/home/joe/programs/apache-tomcat-8.0.5/
-export JAVA_HOME=/home/joe/programs/jdk1.8.0_05
 
 case "$1" in
  start)
