@@ -1,0 +1,12 @@
+[Unit]
+Description=Hassio configurator
+After=network.target
+
+[Service]
+Type=simple
+User=homeassistant
+ExecStart=/usr/bin/python3 /home/homeassistant/.homeassistant/hass-configurator/configurator.py /home/homeassistant/.homeassistant/hass-configurator/configurator.conf
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
