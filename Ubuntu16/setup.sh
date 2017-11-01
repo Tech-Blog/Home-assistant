@@ -34,3 +34,4 @@ sudo wget https://raw.githubusercontent.com/Tech-Blog/Home-assistant/master/Ubun
 sudo chmod 644 /lib/systemd/system/hass.service
 sudo systemctl daemon-reload
 sudo systemctl enable hass.service
+reboot
