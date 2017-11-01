@@ -22,6 +22,7 @@ sudo pip3 install six
 sudo pip3 install fabric
 sudo pip3 install flask_sqlalchemy
 sudo pip3 install sqlalchemy
+sudo pip3 install xmltodict
 
 echo "Installing Home Assistant"
 pip3 install homeassistant
