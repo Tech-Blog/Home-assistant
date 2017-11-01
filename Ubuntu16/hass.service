@@ -4,8 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-User=homeassistant
-ExecStart=hass --open-ui
+ExecStart=reboot
 Restart=on-abort
 
 [Install]
