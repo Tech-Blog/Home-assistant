@@ -1,0 +1,12 @@
+[Unit]
+Description=Hassio configurator
+After=network.target
+
+[Service]
+Type=simple
+User=homeassistant
+ExecStart=hass --open-ui
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
