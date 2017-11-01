@@ -28,7 +28,9 @@ echo "Installing Home Assistant"
 pip3 install homeassistant
 
 #setting up auto start service
-wget https://raw.githubusercontent.com/Tech-Blog/Home-assistant/master/Ubuntu16/hass.service -O /lib/systemd/system/hass.service
+sudo wget https://raw.githubusercontent.com/Tech-Blog/Home-assistant/master/Ubuntu16/hassload.sh -O /etc/hassload.sh
+sudo chmod a+x /etc/hassload.sh
+sudo wget https://raw.githubusercontent.com/Tech-Blog/Home-assistant/master/Ubuntu16/hass.service -O /lib/systemd/system/hass.service
 sudo chmod 644 /lib/systemd/system/hass.service
 sudo systemctl daemon-reload
 sudo systemctl enable hass.service
