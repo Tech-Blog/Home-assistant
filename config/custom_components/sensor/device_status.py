@@ -15,8 +15,11 @@ place this file in the following folder and restart home assistant:
 yaml configuration example:
 sensor:
   - platform: device_status
-    host: Required - host ipaddress / FQDN (google.com etc)
-    name: Optional - Friendly Entity name
+    scan_interval: 10
+    devices:
+    internet_connection:
+       host: 8.8.8.8 8
+       name: "Internet Connection"
     
 
 ////////////////////////////////////////////////////////////////////////////////////////////////"""
