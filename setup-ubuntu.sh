@@ -1,9 +1,12 @@
-#! /bin/sh
-apt-get install python3-pip -y
-pip3 install homeassistant
-cd /etc/init.d
-wget -O  https://raw.githubusercontent.com/Tech-Blog/Home-assistant/master/Hass-Startup-Script hass
-sudo chmod a+x hass
-sudo ./hass start
-sudo ./hass stop
-sudo update-rc.d hass defaults
+sudo apt-get update && sudo apt-get install python-pip python3-dev --yes
+sudo pip install --upgrade virtualenv
+sudo adduser --system homeassistant
+sudo addgroup homeassistant
+sudo usermod -G dialout -a homeassistant
+sudo mkdir /srv/homeassistant
+sudo chown homeassistant:homeassistant /srv/homeassistant
+sudo su -s /bin/bash homeassistant
+virtualenv -p python3 /srv/homeassistant
+source /srv/homeassistant/bin/activate
+pip3 install --upgrade homeassistant
+exit
