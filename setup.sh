@@ -10,3 +10,4 @@ virtualenv -p python3 /srv/homeassistant
 source /srv/homeassistant/bin/activate
 pip3 install --upgrade homeassistant
 exit
+sudo -u homeassistant -H /srv/homeassistant/bin/hass
