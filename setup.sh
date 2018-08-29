@@ -10,4 +10,8 @@ virtualenv -p python3 /srv/homeassistant
 source /srv/homeassistant/bin/activate
 pip3 install --upgrade homeassistant
 exit
-sudo -u homeassistant -H /srv/homeassistant/bin/hass
+
+wget https://raw.githubusercontent.com/Tech-Blog/Home-assistant/master/home-assistant%40homeassistant.service -O /etc/systemd/system/home-assistant@homeassistant.service
+sudo systemctl --system daemon-reload
+sudo systemctl enable home-assistant@homeassistant
+sudo systemctl start home-assistant@homeassistant
